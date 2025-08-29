@@ -1,4 +1,4 @@
-/* Google-Font-Setup */
+ /* Google-Font-Setup */
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -155,8 +155,21 @@ main > section {
   max-width: 500px;
 }
 
+/* Sponsor Related Style  */
+.sponsor-info{
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
 
+.sponsor-company{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 
+}
+.sponsor-company > img{
+  filter: grayscale(100%)
+}
 
 
 /* Responsive media Query  */
@@ -170,8 +183,23 @@ main > section {
     flex-direction: column;
   }
 
-  .team-image-container{
+  .team-image-container,
+  .fact-container,
+  .sponsor-company
+  {
     grid-template-columns: repeat(1, 1fr);
+
+  }
+  .fact-container,
+  .sponsor-company
+  {
+    justify-items: center;
+  }
+  .sponsor-company
+  {
+    justify-items: center;
+    gap: 50px;
+
   }
 
 }
@@ -183,5 +211,11 @@ main > section {
   } 
   .our-features{
     margin-left: 30px auto;
+    
+  }
+  .sponsor-company, 
+  .fact-container
+  {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
